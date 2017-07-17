@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo list</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/modal.css">
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.8.0/firebase-app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.8.0/firebase-auth.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.8.0/firebase-database.js"></script>
+    <script type="text/javascript">var config = {apiKey: "AIzaSyBL7Odusl5A9PReq0U6F48bVOcHLzxC6sg",authDomain: "todo-list-81738.firebaseapp.com",databaseURL: "https://todo-list-81738.firebaseio.com",projectId: "todo-list-81738",storageBucket: "todo-list-81738.appspot.com",messagingSenderId: "301137486905"};firebase.initializeApp(config);</script>
+</head>
+<body>
+    <div id="app">
+        <list params="values"></list>
+        <modal params="visible: modal.visible, title: modal.title, inputs: modal.inputs, clickEvent: modal.authenticate, buttonText: modal.buttonText, buttonBackground: modal.buttonBackground, buttonDisabled: modal.buttonDisabled"></modal>
+    </div>
+
+    <script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+    <script type="text/javascript" src="js/components.js"></script>
+    <script type="text/javascript" src="js/todo.js"></script>
+</body>
+</html>

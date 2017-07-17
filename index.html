@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knockout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.scss">
+</head>
+<body>
+    <div id="app">
+        <p><!--ko text: test --><!--/ko-->: <span data-bind="text: test"></span></p>
+        <p data-bind="css: classes"><!--ko text: test --><!--/ko-->: <span data-bind="html: test"></span></p>
+        <input type="text" data-bind="value: firstName, valueUpdate: 'afterkeydown'">
+        <input type="text" data-bind="value: personAge, valueUpdate: 'afterkeydown'">
+        <p>The name is <span data-bind="text: firstName"></span></p>
+        <p>The full name is <span data-bind="text: fullName"></span></p>
+        <input type="text" data-bind="textInput: fullName">
+        <p>The initial age is <span data-bind="text: personAge.peek()"></span></p>
+        <select data-bind="options: myObservableArray, value: selectedIndex" multiple></select>
+        <p data-bind="text: selectedIndex"></p>
+    </div>
+    
+    <script type="text/javascript" src="knockout-3.4.2.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
